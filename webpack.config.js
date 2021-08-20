@@ -2,7 +2,7 @@ const path = require('path');
 
 module.exports = {
     // モードの設定
-    mode: 'development',
+    mode: 'production', //development
     // エントリーポイントの設定
     entry: `./src/index.js`,
     // ファイルの出力設定
