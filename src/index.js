@@ -1,7 +1,7 @@
-import GetTime from './modules/getTime';
+import Clock from './modules/clock';
 import './style.scss';
 
-const getTime = new GetTime();
+const clock = new Clock();
 
 window.onload = () => {
     const dispNowDate = document.getElementById("disp-now-date");
@@ -19,10 +19,10 @@ window.onload = () => {
 
     setInterval(() => {
         //時刻更新
-        getTime.update();
+        clock.update();
         //時刻表示
-        dispNowDate.innerText = getTime.getTimeNow();
+        dispNowDate.innerText = clock.getTimeNow();
         //時計表示
-        getTime.dispClock(element_h, element_m, element_s);
+        clock.dispClock(element_h, element_m, element_s);
     }, 100);
 }

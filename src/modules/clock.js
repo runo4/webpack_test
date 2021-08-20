@@ -1,4 +1,4 @@
-export default class GetTime{
+export default class Clock{
     constructor(){
         this.now = new Date();
         this.hour = this.now.getHours();
