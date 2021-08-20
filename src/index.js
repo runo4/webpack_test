@@ -8,6 +8,14 @@ window.onload = () => {
     const element_h = document.getElementById("h");
     const element_m = document.getElementById("m");
     const element_s = document.getElementById("s");
+    const scaleWrapper = document.getElementById("scale-wrapper");
+
+    //目盛り生成
+    for(let i = 1; i <= 12; i++){
+        const scale = document.createElement('div');
+        scale.id = `scale${i}`;
+        scaleWrapper.appendChild(scale);
+    }
 
     setInterval(() => {
         //時刻更新

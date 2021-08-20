@@ -28,26 +28,27 @@ html, body{
     height: 240px;
     min-width: 240px;
     background-color: white;
+    border: solid 2px rgb(63, 63, 63); 
     border-radius: 50%;
 }
 
 #h{
     position: absolute;
-    top: calc(50% - 85px + 5px);
-    left: calc(50% - 12px / 2);
-    width: 12px;
-    height: 85px;
-    background-color: rgb(216, 216, 216);
-    transform-origin: 50% calc(85px - 5px);
+    top: calc(50% - 70px + 5px);
+    left: calc(50% - 8px / 2);
+    width: 8px;
+    height: 70px;
+    background-color: rgb(167, 167, 167);
+    transform-origin: 50% calc(70px - 5px);
 }
 
 #m{
     position: absolute;
     top: calc(50% - 100px + 10px);
-    left: calc(50% - 8px / 2);
-    width: 8px;
+    left: calc(50% - 6px / 2);
+    width: 6px;
     height: 100px;
-    background-color: rgb(145, 145, 145);
+    background-color: rgb(112, 112, 112);
     transform-origin: 50% calc(100px - 10px);
 }
 
@@ -63,12 +64,25 @@ html, body{
 
 #center-point{
     position: absolute;
-    top: 115px;
-    left: 115px;
+    top: calc(50% - 10px / 2);
+    left: calc(50% - 10px / 2);
     width: 10px;
     height: 10px;
-    background-color: rgb(0, 0, 0);
+    background-color: rgb(63, 63, 63);
     border-radius: 50%;
+}
+
+@for $i from 1 through 12{
+    #scale#{$i}{
+        position: absolute;
+        top: 6px;
+        left: calc(120px - 2px);
+        width: 4px;
+        height: 15px;
+        background-color: rgb(112, 112, 112);
+        transform: rotate(calc(30deg * (#{$i} - 1)));
+        transform-origin: 50% calc(120px - 6px);
+    }
 }
 /**/
 
