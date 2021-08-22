@@ -22,7 +22,7 @@ html, body{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 40px;
+    gap: 20px;
     width: 50%;
     height: 50%;
 }
@@ -96,7 +96,66 @@ html, body{
 /**/
 
 #disp-now-date{
-    font-size: 48px;
+    font-size: 36px;
     color: rgb(63, 63, 63);
+    font-weight: lighter;
+    letter-spacing: 4px;
     text-shadow: 4px 4px 1px rgba(107, 109, 119, 0.3);
 }
+
+/*アンテナ*/
+.antena{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    gap: 10px;
+    width: 240px;
+    height: 240px;
+    min-width: 240px;
+    min-height: 240px;
+}
+
+span{
+    display: inline-block;
+    width: 20px;
+    min-width: 20px;
+    height: 20px;
+    border-radius: 10px;
+    transition: box-shadow 0.2s ease-in-out;
+    box-shadow: 4px 4px 8px 0 rgba(37, 38, 43, 0.3),
+                -4px -4px 8px 0 rgba(243,252,255,1),
+                inset 4px 4px 8px 0 transparent,
+                inset -4px -4px 8px 0 transparent;
+    animation: inversion 1.0s linear infinite;
+}
+
+span:nth-child(1){ animation-delay: 0s; transform: translateY(40px);}
+span:nth-child(2){ animation-delay: 0.2s; height: 40px; transform: translateY(30px);}
+span:nth-child(3){ animation-delay: 0.4s; height: 60px; transform: translateY(20px);}
+span:nth-child(4){ animation-delay: 0.6s; height: 80px; transform: translateY(10px);}
+span:nth-child(5){ animation-delay: 0.8s; height: 100px;}
+
+@keyframes inversion{
+    0%{
+        box-shadow: 4px 4px 8px 0 rgba(37, 38, 43, 0.3),
+                    -4px -4px 8px 0 rgba(243,252,255,1),
+                    inset 4px 4px 8px 0 transparent,
+                    inset -4px -4px 8px 0 transparent;
+    }
+
+    20%{
+        box-shadow: 4px 4px 8px 0 transparent,
+                    -4px -4px 8px 0 transparent,
+                    inset 4px 4px 8px 0 rgba(37, 38, 43, 0.3),
+                    inset -4px -4px 8px 0 rgba(243,252,255,1);
+    }
+
+    40%{
+        box-shadow: 4px 4px 8px 0 rgba(37, 38, 43, 0.3),
+                    -4px -4px 8px 0 rgba(243,252,255,1),
+                    inset 4px 4px 8px 0 transparent,
+                    inset -4px -4px 8px 0 transparent;
+    }
+}
+/**/
